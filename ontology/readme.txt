@@ -1,0 +1,1 @@
+in this section,we construct the ontology of movie.and then we design the table of mysql database.
