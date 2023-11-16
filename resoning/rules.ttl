@@ -1,0 +1,26 @@
+@prefix : <http://www.kgdemo.com#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+[ruleAdventure_Actor: (?p :hasActedIn ?m) (?m :hasGenre ?g) (?g :genreName '冒险') -> (?p rdf:type :Adventure_Actor)]
+[ruleFantasy_Actor: (?p :hasActedIn ?m) (?m :hasGenre ?g) (?g :genreName '奇幻') -> (?p rdf:type :Fantasy_Actor)]
+[ruleAnimated_Actor: (?p :hasActedIn ?m) (?m :hasGenre ?g) (?g :genreName '动画') -> (?p rdf:type :Animated_Actor)]
+[rulePlot_Actor: (?p :hasActedIn ?m) (?m :hasGenre ?g) (?g :genreName '剧情') -> (?p rdf:type :Plot_Actor)]
+[ruleHorror_Actor: (?p :hasActedIn ?m) (?m :hasGenre ?g) (?g :genreName '恐怖') -> (?p rdf:type :Horror_Actor)]
+[ruleAction_Actor: (?p :hasActedIn ?m) (?m :hasGenre ?g) (?g :genreName '动作') -> (?p rdf:type :Action_Actor)]
+[ruleHistorical: (?p :hasActedIn ?m) (?m :hasGenre ?g) (?g :genreName '历史') -> (?p rdf:type :Historical_Actor)]
+[ruleTheWestern_Actor: (?p :hasActedIn ?m) (?m :hasGenre ?g) (?g :genreName '西部') -> (?p rdf:type :TheWestern_Actor)]
+[ruleThriller_Actor: (?p :hasActedIn ?m) (?m :hasGenre ?g) (?g :genreName '惊悚') -> (?p rdf:type :Thriller_Actor)]
+[ruleCrime_Actor: (?p :hasActedIn ?m) (?m :hasGenre ?g) (?g :genreName '犯罪') -> (?p rdf:type :Crime_Actor)]
+[ruleRecording_Actor: (?p :hasActedIn ?m) (?m :hasGenre ?g) (?g :genreName '记录') -> (?p rdf:type :Recording_Actor)]
+[ruleScienceFiction_Actor: (?p :hasActedIn ?m) (?m :hasGenre ?g) (?g :genreName '科幻') -> (?p rdf:type :ScienceFiction_Actor)]
+[ruleSuspense_Actor: (?p :hasActedIn ?m) (?m :hasGenre ?g) (?g :genreName '悬疑') -> (?p rdf:type :Suspense_Actor)]
+[ruleMusic_Actor: (?p :hasActedIn ?m) (?m :hasGenre ?g) (?g :genreName '音乐') -> (?p rdf:type :Music_Actor)]
+[ruleLove_Actor: (?p :hasActedIn ?m) (?m :hasGenre ?g) (?g :genreName '爱情') -> (?p rdf:type :Love_Actor)]
+[ruleHome_Actor: (?p :hasActedIn ?m) (?m :hasGenre ?g) (?g :genreName '家庭') -> (?p rdf:type :Home_Actor)]
+[ruleWar_Actor: (?p :hasActedIn ?m) (?m :hasGenre ?g) (?g :genreName '战争') -> (?p rdf:type :War_Actor)]
+[ruleTV_Actor: (?p :hasActedIn ?m) (?m :hasGenre ?g) (?g :genreName '电视电影') -> (?p rdf:type :TV_Actor)]
+[ruleComedian: (?p :hasActedIn ?m) (?m :hasGenre ?g) (?g :genreName '喜剧') -> (?p rdf:type :Comedian)]
+[ruleSymmetric: (?p :hasActedIn ?m) -> (?m :hasActor ?p)]
